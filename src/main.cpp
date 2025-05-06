@@ -26,7 +26,7 @@
 #define HUM_POT 33
 #define TURN_POT 25
 
-#define SET_BUTTON 2
+#define SET_BUTTON 17
 
 char turns;
 long turnTime;
