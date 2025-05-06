@@ -144,7 +144,6 @@ float readPot(char type, char pin) {
 
 void displayMeasurements(float temp, float hum, int turn) {
   lcd.clear();
-  lcd.setCursor(0, 0);
   String output = "T: " + String(temp) + " H: " + String(hum);
-  lcd.print(output);
+  lcd.println(output);
 }

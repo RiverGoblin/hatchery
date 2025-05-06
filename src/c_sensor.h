@@ -15,6 +15,7 @@ class c_sensor {
     private:
         SHT21 sensorObj;
     public:
+        c_sensor();
         sensorReading readSensor();
 };
 
