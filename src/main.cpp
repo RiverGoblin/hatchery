@@ -45,7 +45,7 @@ void loop() {
     Serial.println(reading.hum);
     Serial.println(reading.temp);
     manageTemp(reading.hum, TEMP, TEMP_HYST);
-    manageHUM(reading.hum, HUM, HUM_HYST);
+    manageHumidity(reading.hum, HUM, HUM_HYST);
     displayParams(reading.temp, reading.hum, 1);
     lastRead = millis();
     Serial.println("loop zoop");
@@ -63,7 +63,7 @@ void manageTemp(float temperature, float target, float hyst) {
   }
 }
 
-void manageHUM(float humidity, float target, float hyst) {
+void manageHumidity(float humidity, float target, float hyst) {
   if (humidity < target - hyst) {
     digitalWrite(HUM_PIN, HIGH); //humidifier on
   }
